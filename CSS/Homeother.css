@@ -1,0 +1,86 @@
+﻿a
+{
+	color:#FFFFFF;
+	font-family:Tahoma;
+	font-size:15px;
+	text-decoration: none;
+}
+.divback
+{	
+	background: url(Images/login.png) no-repeat;	
+}
+.lucidafax
+{
+	font-family:Lucida Bright;
+}
+.round
+{
+	border-radius:20px;
+}
+ a:hover
+        {
+            color: Red;
+        }
+        
+        .txt
+        {
+            text-align: left;
+        }
+        a:hover
+        {
+            color: Red;
+            text-decoration: underline;
+        }
+        .a
+        {
+            color: White;
+            font-family: Lucida Fax;
+            text-decoration: none;
+        }
+        .Link
+        {
+            color:Blue;
+        }
+        .Link:hover
+        {
+            color: Red;
+            text-decoration: underline;
+        }
+        .uppercase
+        {
+            text-transform: uppercase;
+        }
+        .btn
+        {
+        	border-radius:10px;
+        	font-family:Lucida Bright;
+        }
+        #container { width:98%; margin:0px auto 0px auto; background:#fff; border-radius:3px; padding:0px 0 0px 0; border:solid 1px #f0f0f0;}
+.lnkchallan
+{
+	
+	 color:#0000FF;
+	 font-family:Tahoma;
+	 font:15px;
+	 text-decoration:none;
+}
+
+.txtupper
+{
+    text-transform:uppercase;
+    font-family:Cambria;
+    font-size:15px;
+}
+.Master
+{
+    font-family:Calibri;
+    color:#FFFFFF;
+    text-transform:uppercase;
+    font-size:15px;
+
+}
+.Master:hover
+{
+    color: Red;
+    text-decoration: underline;
+}

@@ -1,0 +1,182 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Main.master.cs" Inherits="Main" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head id="Head1" runat="server">
+    <title>UTTARAKHAND BOARD OF TECHNICAL EDUCATION , ROORKEE</title>
+    <link href="../CSS/Home.css" rel="stylesheet" type="text/css" />
+    <link href="../Content/Admin/css/bootstrap.css" rel="stylesheet" />
+    <link href="../Content/Admin/css/font-awesome.css" rel="stylesheet" />
+    <link href="../Content/Admin/css/style.css" rel="stylesheet" />
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css' />
+    <link href="../CSS/HeaderFooter.css" type="text/css" rel="Stylesheet" />
+    <link href="../CSS/Homeother.css" type="text/css" rel="Stylesheet" />
+    <script src="../Scripts/Common.js" type="text/javascript" language="javascript"></script>
+    <link rel="Icon" href="../Images/favicon.ico" />
+    <script type="text/javascript">
+        window.history.forward();
+        function noBack() {
+            if (!navigator.onLine) {
+                document.body.innerHTML = 'Loading.....';
+                window.location = '../Error.aspx';
+            }
+            window.history.forward();
+        }
+    </script>
+</head>
+<body onload="noBack();" oncontextmenu="return false">
+    <form id="form1" runat="server" autocomplete="off">
+    <center>
+        <div style="width: 95%">
+            <table width="100%" cellpadding="4">
+                <tr class="linehead">
+                    <td colspan="2" align="center">
+                        <div class="row">
+                            <div class="col-lg-3">
+                                <img alt="Ubter" src="../Images/Logo.jpg" height="100px" />
+                            </div>
+                            <div class="col-lg-8" style="font-family: Agency FB; font-size: 20px;">
+                                <b style="font-family: Agency FB; font-size: 24px; color: #FF0000;">UTTARAKHAND BOARD
+                                    OF TECHNICAL EDUCATION , ROORKEE [ HARIDWAR ]
+                                    <br />
+                                    <font style="color: #FF0000; font-family: Courier New; font-size: 16px;">ANNUAL & SEMESTER
+                                        EXAMINATION<br />
+                                        <font style="color: #000000; font-family: Courier New;">( SUMMER & WINTER )</font>
+                                    </font></b>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </center>
+    <hr />
+    <div>
+        <table width="100%" style="font-family: Cambria">
+            <tr>
+                <%-- For left navigation--%>
+                <td style="width: 22%; height: auto" valign="top">
+                    <table class="table">
+                        <tr id="TRHOME" runat="server">
+                            <td style="width: 15px; height: 25px; background-color: #4682B4;">
+                            </td>
+                            <td valign="middle" style="height: 25px; width: 350px; background-color: #4682B4;">
+                                <asp:HyperLink CssClass="Master" ForeColor="Red" ID="Lnkhome" NavigateUrl="~/Student/Stuhome.aspx"
+                                    Font-Names="Cambria" runat="server">Home</asp:HyperLink>
+                                <asp:Image ID="Imghome" runat="server" ImageUrl="~/Images/smdosv5.png" />
+                            </td>
+                        </tr>
+                        <tr id="TRREGSTATUS" runat="server">
+                            <td style="width: 15px; height: 25px; background-color: #4682B4;">
+                            </td>
+                            <td valign="middle" style="height: 25px; width: 350px; background-color: #4682B4;">
+                                <asp:HyperLink CssClass="Master" ForeColor="Red" ID="Lnkstatus" NavigateUrl="~/Student/Status.aspx?mode=home"
+                                    Font-Names="Cambria" runat="server">REGISTRATION STATUS</asp:HyperLink>
+                                <asp:Image ID="Imgstatus" runat="server" ImageUrl="~/Images/smdosv5.png" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="width: 20px; height: 25px; background-color: #4682B4;">
+                                <asp:Image ID="Imgreg1" runat="server" Visible="true" Height="25px" Width="20px"
+                                    ImageUrl="~/Images/rightarrow.gif" />
+                            </td>
+                            <td valign="middle" style="height: 25px; width: 350px; background-color: #4682B4;">
+                                <asp:HyperLink CssClass="Master" ID="LnkReg1" Enabled="false" runat="server" Target="_blank"
+                                    Font-Names="Cambria" NavigateUrl="~/Student/Registration.aspx">Registration Details</asp:HyperLink>&nbsp;&nbsp;
+                                <asp:LinkButton ID="Lnkreg1edit" runat="server" ForeColor="#DEB887" Visible="false"
+                                    Font-Names="Cambria" CssClass="Master" OnClick="Lnkreg1edit_Click">Edit</asp:LinkButton>
+                                <asp:Image ID="Imgstatreg1" runat="server" Visible="false" ImageUrl="~/Images/smdosv5.png" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="width: 20px; height: 25px; background-color: #4682B4;">
+                                <asp:Image ID="ImgQua" runat="server" Visible="false" Height="25px" Width="20px"
+                                    ImageUrl="~/Images/rightarrow.gif" />
+                            </td>
+                            <td valign="middle" style="height: 25px; width: 350px; background-color: #4682B4;">
+                                <asp:HyperLink CssClass="Master" ID="LnkQua" Enabled="false" runat="server" Target="_blank"
+                                    Font-Names="Cambria" NavigateUrl="~/Student/Qualification.aspx">Qualification Details</asp:HyperLink>&nbsp;&nbsp;
+                                <asp:LinkButton ID="Lnkquaedit" runat="server" ForeColor="#DEB887" Visible="false"
+                                    Font-Names="Cambria" CssClass="Master" OnClick="Lnkquaedit_Click">Edit</asp:LinkButton>
+                                <asp:Image ID="ImgStatQua" runat="server" Visible="false" ImageUrl="~/Images/smdosv5.png" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="width: 20px; height: 25px; background-color: #4682B4">
+                                <asp:Image ID="Imgaddress" runat="server" Visible="false" Height="25px" Width="20px"
+                                    ImageUrl="~/Images/rightarrow.gif" />
+                            </td>
+                            <td valign="middle" style="height: 25px; width: 350px; background-color: #4682B4;">
+                                <asp:HyperLink CssClass="Master" ID="Lnkaddress" Enabled="false" Target="_blank"
+                                    Font-Names="Cambria" NavigateUrl="~/Student/Address.aspx" runat="server">Address Details</asp:HyperLink>
+                                &nbsp;&nbsp;
+                                <asp:LinkButton ID="Lnkaddedit" runat="server" ForeColor="#DEB887" Visible="false"
+                                    Font-Names="Cambria" CssClass="Master" OnClick="Lnkaddedit_Click">Edit</asp:LinkButton>
+                                <asp:Image ID="Imgstataddress" runat="server" Visible="false" ImageUrl="~/Images/smdosv5.png" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="width: 20px; height: 25px; background-color: #4682B4;">
+                                <asp:Image ID="Imgphoto" runat="server" Visible="false" Height="25px" Width="20px"
+                                    ImageUrl="~/Images/rightarrow.gif" />
+                            </td>
+                            <td valign="middle" style="height: 25px; width: 350px; background-color: #4682B4;">
+                                <asp:HyperLink CssClass="Master" ID="Lnkphoto" Enabled="false" Target="_blank" NavigateUrl="~/Student/PhotoSign.aspx"
+                                    Font-Names="Cambria" runat="server">Upload Photo,Sign Image</asp:HyperLink>
+                                &nbsp;
+                                <asp:LinkButton ID="Lnkphedit" runat="server" ForeColor="#DEB887" Visible="false"
+                                    Font-Names="Cambria" CssClass="Master" OnClick="Lnkphedit_Click">Change</asp:LinkButton>
+                                <asp:Image ID="Imgstatphoto" runat="server" Visible="false" ImageUrl="~/Images/smdosv5.png" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="width: 20px; height: 25px; background-color: #4682B4;">
+                                <asp:Image ID="Imgview" runat="server" Visible="false" Height="25px" Width="20px"
+                                    ImageUrl="~/Images/rightarrow.gif" />
+                            </td>
+                            <td valign="middle" style="height: 25px; width: 350px; background-color: #4682B4;">
+                                <asp:HyperLink CssClass="Master" Target="_blank" ID="Lnkview" NavigateUrl="~/Report/View.aspx"
+                                    Font-Names="Cambria" runat="server">Filled-up Confimation Page</asp:HyperLink>
+                                <asp:Image ID="Imgstatview" runat="server" Visible="false" ImageUrl="~/Images/smdosv5.png" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="2" align="right">
+                                <asp:LinkButton ID="Lnklogout" ForeColor="#0000FF" runat="server" OnClick="Lnklogout_Click"><span style="font-family:Cambria">LOGOUT</span></asp:LinkButton><br />
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+                <%--For content place holder--%>
+                <td valign="top" style="width: 78%;">
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                    </asp:ContentPlaceHolder>
+                </td>
+            </tr>
+        </table>
+        <br />
+        <br />
+        <asp:UpdateProgress ID="UpdateProgress1" runat="server">
+            <ProgressTemplate>
+                <div class="Waiting">
+                    <div class="center">
+                        <img src="../Images/loading.gif" alt="Loading..." />
+                    </div>
+                </div>
+            </ProgressTemplate>
+        </asp:UpdateProgress>
+    </div>
+    <div id="SAN">
+        <div class="container">
+            <div align="center">
+                Uttarakhand Board of Technical Education | &#169; All Rights Reserved |
+                <%=DateTime.Now.Year.ToString() %>
+            </div>
+        </div>
+    </div>
+    </form>
+    <script src="../Content/Admin/js/jquery-1.10.2.js" type="text/javascript"></script>
+    <script src="../Content/Admin/js/bootstrap.js" type="text/javascript"></script>
+    <script src="../Content/Admin/js/custom.js" type="text/javascript"></script>
+</body>
+</html>

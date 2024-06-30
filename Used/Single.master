@@ -1,0 +1,82 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Single.master.cs" Inherits="Single" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head id="Head1" runat="server">
+    <title>::Application</title>
+    <link href="../CSS/Inshome.css" type="text/css" rel="Stylesheet" />
+    <link href="../CSS/Ins.css" type="text/css" rel="Stylesheet" />
+    <link href="../CSS/HeaderFooter.css" type="text/css" rel="Stylesheet" />
+    <link href="../CSS/Homeother.css" type="text/css" rel="Stylesheet" />
+    <link href="../CSS/All.css" type="text/css" rel="Stylesheet" />
+    <link href="../CSS/Tab.css" type="text/css" rel="Stylesheet" />
+    <script src="../Scripts/Common.js" type="text/javascript" language="javascript"></script>
+    <script src="../Scripts/Min.js" type="text/javascript" language="javascript"></script>
+    <script src="../Scripts/Inshome.js" type="text/javascript" language="javascript"></script>
+    <link rel="Icon" href="../Images/favicon.ico" />
+    <script type="text/javascript">
+        window.history.forward();
+        function noBack() {
+            if (!navigator.onLine) {
+                document.body.innerHTML = 'Loading.....';
+                window.location = '../Error.aspx';
+            }
+            window.history.forward();
+        }
+         
+    </script>
+</head>
+<body style="background-color: #FFFFFF">
+    <form id="form1" runat="server" autocomplete="off">
+    <center>
+        <table cellpadding="0" cellspacing="0" style="width: 100%;">
+            <tr>
+                <td align="right" class="linehead" style="background-color: #008000; color: #FFFFFF;
+                    width: 400px;">
+                    <img alt="Uttarakhand" src="../Images/Logo.jpg" height="100px" />
+                </td>
+                <td align="center" class="linehead" style="background-color: #008000; color: #FFFFFF;
+                    font-family: Agency FB; height: 60px; font-size: 25px;">
+                    UTTARAKHAND BOARD OF TECHNICAL EDUCATION , ROORKEE [ HARIDWAR ]
+                    <br />
+                    <font style="color: #FFFFFF; font-family: Courier New; font-size: 16px;">ANNUAL / SEMESTER
+                        EXAMINATION<br />
+                        <font style="color: #D2B48C; font-family: Courier New;">( SUMMER / WINTER )</font>
+                    </font>
+                </td>
+            </tr>
+        </table>
+        <div id='cssmenu'>
+            <ul>
+                <li><a runat="server" id="Lnkbrhome" href="Brhomesingle.aspx">HOME</a>
+                </li>
+                 <li><a runat="server" id="Lnkadd" href="Approve.aspx">ADD NEW STUDENT</a>
+                </li>
+                <li class='last'>
+                    <asp:LinkButton ID="Lnklogout" runat="server" OnClick="Lnklogout_Click">LOGOUT</asp:LinkButton></li>
+            </ul>
+        </div>
+        <p style="background-color: #87CEEB; color: #FFFFFF;">
+            <asp:Label ID="Lblname" Font-Names="Lucida Fax" runat="server" ForeColor="#000000"
+                CssClass="txtbox" Font-Size="17px" Font-Bold="true" Text="Label"></asp:Label>
+            <hr />
+        </p>
+        <div style="width: 1024px;">
+            <center>
+                <%--For content place holder--%>
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                </asp:ContentPlaceHolder>
+                <marquee onmouseover="this.stop();" direction="left" onmouseout="this.start();"><span style="color: #FF0000; font-style:italic; font-size:15px;">* Please Do Not Share Your Password to Anyone *</span></marquee>
+                <div id="SAN" style="width: 1024px">
+                    <div class="container">
+                        <div align="right">
+                            Uttarakhand Board of Technical Education | &#169; All Rights Reserved | 2019
+                        </div>
+                    </div>
+                </div>
+            </center>
+        </div>
+    </center>
+    </form>
+</body>
+</html>

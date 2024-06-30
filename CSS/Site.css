@@ -1,0 +1,171 @@
+﻿table,tr,td,div
+{
+		font-family: Arial, Helvetica, sans-serif;
+		font-size: 12px;
+		text-align:left;		
+	
+}
+
+.body
+{
+	margin:5px;
+}
+
+
+
+/*classes for login window */
+
+
+.header
+{
+	color: white;
+	font-weight: normal;
+	background-color: #0e9ecf;
+	border-radius: 10px;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	text-align: center;
+	height: 70px;
+	font-size: 16px;
+}
+
+.content
+{
+    border: 1px solid #C0C0C0;
+    border-radius: 18px;
+    -moz-border-radius: 18px;
+    -webkit-border-radius: 18px;
+    padding :10px;
+    background-color: #ecf4f9;    
+}
+
+
+.footer
+{
+	color: #FFFFFF;
+	font-weight: normal;
+	background-color: #0e9ecf;
+	border-radius: 10px;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	text-align: center;
+	height: 50px;
+	font-size: 10px;
+}
+
+.input-window
+{
+	border-radius: 18px;
+	-moz-border-radius: 18px;
+	-webkit-border-radius: 18px;
+	border: 3px solid #D04528;
+	width: 90%;	
+	background-color: #FFFFFF;
+}
+
+.rollnumber
+{
+	height: 30px;
+	text-align: center;
+	padding: 5px;
+	vertical-align: middle;
+	border-bottom-style: solid;
+	border-bottom-width: 1px;
+	border-bottom-color: #C0C0C0;
+	font-size: 12px;
+	font-family: Tahoma;
+}
+
+.Text
+{
+	width: 150px;
+	height: 25px;
+	text-align: left;
+	vertical-align: middle;
+	border-bottom-style: dashed;
+	border-bottom-width: 1px;
+	border-bottom-color: #C0C0C0;
+	font-size: 12px;
+	font-family: Calibri;
+	font-weight: bold;
+}
+
+.loginButton
+{
+	border: 1px solid #CC3300;
+	background-color: #EBA394;
+	color: #000000;
+	font-weight: normal;
+	font-size: 92%;
+	height: 25px;
+}
+
+.loginMessage
+{
+    font-weight: bold;
+    color: #FF0000;    
+}
+
+.welcome
+{
+	font-size: 10px;
+	color: #CC3300;	
+	
+}
+
+
+
+/* classes for grid */
+
+.Row1
+{
+	background-color: #FFFFFF;
+}
+.Row2
+{
+	background-color: #FFF1EC;	
+}
+
+
+.gridColHead
+{
+	background-color: #FFBFAA;
+	color: #000000;
+	font-size: 10px;
+	font-family: tahoma;
+	padding-left: 5px;
+	height: 20px;
+	vertical-align: middle;
+	text-align:left;
+}
+
+.gridColHeadEditDelete
+{
+    background-color: #FFBFAA;
+    color: #000000;
+    font-size: 10px;
+    font-family: tahoma;
+    padding-left:5px;
+    width:30px;
+    height:20px;
+    vertical-align:middle;
+}
+.gridRow1
+{
+	background-color: #CECECE;
+	height: 20px;
+	font-family: tahoma;
+	font-size: 12px;
+	padding-left: 5px;
+}
+
+.gridTable
+{
+    width: 100%;
+}
+.gridCol
+{
+	text-align:center;
+	vertical-align:middle;
+	height:20px;
+}

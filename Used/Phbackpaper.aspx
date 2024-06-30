@@ -1,0 +1,101 @@
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Student/Home.master" AutoEventWireup="true"
+    CodeFile="Phbackpaper.aspx.cs" Inherits="Phbackpaper" %>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
+    <asp:ScriptManager EnableCdn="true" ID="ScriptManager1" EnableHistory="false" runat="server">
+    </asp:ScriptManager>
+    <asp:UpdatePanel ID="UpdatePanel2" runat="server">
+        <ContentTemplate>
+            <center>
+                <table width="1024px" align="center" style="border: solid 1px #000000; color: #000000;
+                    font-family: Cambria; font-size: 15px">
+                    <tr>
+                        <td align="center" colspan="2" style="color: #FFFFFF; background-color: #008000;
+                            font-weight: bold; font-size: 22px;" class="lineheader">
+                            - APPLICATION FORM FOR BACK PAPER -
+                        </td>
+                    </tr>
+                    <tr id="TRBACKP" runat="server">
+                        <td colspan="2" style="color: #FF0000">
+                            NOTE:- IF YOU WANT'S TO APPLY FOR BACK PAPER, PLEASE SELECT BACK PAPER SUBJECT CODE
+                            OF THEORY AND PRACTICAL.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" align="center">
+                            <%=Comp %>
+                            <asp:GridView ID="Grdsub" CssClass="grd" Width="100%" runat="server" AutoGenerateColumns="False"
+                                CellPadding="3" BackColor="White" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px">
+                                <Columns>
+                                    <asp:BoundField HeaderText="SUBJECT" DataField="SUBJECT" HeaderStyle-HorizontalAlign="Left">
+                                        <HeaderStyle HorizontalAlign="Left"></HeaderStyle>
+                                    </asp:BoundField>
+                                    <asp:BoundField HeaderText="THEORY MARKS" DataField="THE_MARKS" HeaderStyle-HorizontalAlign="Left">
+                                        <HeaderStyle HorizontalAlign="Left"></HeaderStyle>
+                                    </asp:BoundField>
+                                    <asp:TemplateField HeaderText="THEORY SUBJECT" HeaderStyle-HorizontalAlign="Left">
+                                        <ItemTemplate>
+                                            <asp:CheckBox ID="CbSelectth" Text='<%# Eval("THE_BACK") %>' CssClass="gridCB" runat="server">
+                                            </asp:CheckBox>
+                                        </ItemTemplate>
+                                    </asp:TemplateField>
+                                    <asp:BoundField HeaderText="PRACTICAL MARKS" DataField="PRA_MARKS" HeaderStyle-HorizontalAlign="Left">
+                                        <HeaderStyle HorizontalAlign="Left"></HeaderStyle>
+                                    </asp:BoundField>
+                                    <asp:TemplateField HeaderText="PRACTICAL SUBJECT" HeaderStyle-HorizontalAlign="Left">
+                                        <ItemTemplate>
+                                            <asp:CheckBox ID="CbSelectpr" Text='<%# Eval("PRA_BACK") %>' CssClass="gridCB" runat="server">
+                                            </asp:CheckBox>
+                                        </ItemTemplate>
+                                    </asp:TemplateField>
+                                </Columns>
+                                <FooterStyle BackColor="White" ForeColor="#000066"></FooterStyle>
+                                <HeaderStyle BackColor="#006699" Font-Bold="True" ForeColor="White"></HeaderStyle>
+                                <PagerStyle BackColor="White" ForeColor="#000066" HorizontalAlign="Left"></PagerStyle>
+                                <RowStyle ForeColor="#000066"></RowStyle>
+                                <SelectedRowStyle BackColor="#669999" Font-Bold="True" ForeColor="White"></SelectedRowStyle>
+                                <SortedAscendingCellStyle BackColor="#F1F1F1"></SortedAscendingCellStyle>
+                                <SortedAscendingHeaderStyle BackColor="#007DBB"></SortedAscendingHeaderStyle>
+                                <SortedDescendingCellStyle BackColor="#CAC9C9"></SortedDescendingCellStyle>
+                                <SortedDescendingHeaderStyle BackColor="#00547E"></SortedDescendingHeaderStyle>
+                            </asp:GridView>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="center">
+                            <br />
+                            <asp:CheckBox ID="Chksem2" Font-Italic="true" Font-Size="16px" runat="server" Text="I agree to submit my back paper application form " />
+                            <br />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="center">
+                            <br />
+                            <asp:Button ID="Btnsubmit" CssClass="butn" runat="server" Text="Submit" OnClick="Btnsubmit_Click" />
+                            <br />
+                            <br />
+                            <br />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" align="left" style="font-family: Cambria; font-size: 14px; color: #0000FF;
+                            border-top: solid 1px #000000;">
+                            </b>»VIEW SECOND SEMESTER & BACK PAPER &#160; <a href="Feestructure.aspx" target="_blank">
+                                FEE STRUCTURE</a>.<br />
+                            <b><u>NOTE :</u>
+                                <br />
+                                <i style="color: #FF0000">No Chnages allow in Back Paper after Submission of Application
+                                    Form.</i>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="center" colspan="2">
+                            <asp:Label ID="LblMessage" Font-Size="15px" ForeColor="#FF0000" runat="server" Text=""></asp:Label>
+                            <br />
+                        </td>
+                    </tr>
+                </table>
+            </center>
+        </ContentTemplate>
+    </asp:UpdatePanel>
+</asp:Content>

@@ -1,0 +1,46 @@
+﻿body {margin:0px;}
+.linehead
+{
+  font-size:13.5px;
+  font-family:Agency FB;
+  background-color: #1a82f7;
+  background: url(images/linear_bg_2.png);
+  background-repeat: repeat-x;
+  /* Safari 4-5, Chrome 1-9 */
+  background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#FFFFFF), to(#FFFFFF));
+
+  /* Safari 5.1, Chrome 10+ */
+  background: -webkit-linear-gradient(top, #FFFFFF, #FFFFFF);
+
+  /* Firefox 3.6+ */
+  background: -moz-linear-gradient(top, #FFFFFF, #FFFFFF);
+
+  /* IE 10 */
+  background: -ms-linear-gradient(top, #FFFFFF, #FFFFFF);
+
+  /* Opera 11.10+ */
+  background: -o-linear-gradient(top, #FFFFFF, #FFFFFF);
+}
+.lineheader 
+{
+  font-family:Agency FB;
+  background-color: #1a82f7;
+  background: url(../images/Images.jpg);
+  background-repeat: repeat-x;
+ 
+  height:20px;
+  color:#FFFFFF;
+}
+.Footer
+{
+text-align: right;
+height:10px;
+  width:100%;; 
+  font-size:15px;
+  color:#00FF7F;
+}
+.style{
+text-shadow: 0 6px 4px #85c226,
+		     -3px -5px 4px #fe2192,
+		     3px -5px 4px #f7c200;
+} 

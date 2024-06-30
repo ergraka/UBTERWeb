@@ -1,0 +1,98 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Home.master.cs" Inherits="Home" %>
+
+<%@ Register Namespace="AjaxControlToolkit" Assembly="AjaxControlToolkit" TagPrefix="ajax" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head id="Head1" runat="server">
+    <title>ROORKEE ANNUAL/SEMESTER EXAMINATION </title>
+    <link href="../Content/Admin/css/bootstrap.css" rel="stylesheet" />
+    <link href="../Content/Admin/css/font-awesome.css" rel="stylesheet" />
+    <link href="../Content/Admin/css/style.css" rel="stylesheet" />
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css' />
+    <link href="../Images/favicon.ico" rel="Icon File" />
+    <link href="../CSS/HeaderFooter.css" type="text/css" rel="Stylesheet" />
+    <link href="../CSS/Home.css" type="text/css" rel="Stylesheet" />
+    <link href="../CSS/All.css" type="text/css" rel="Stylesheet" />
+    <link href="../CSS/Tab.css" type="text/css" rel="Stylesheet" />
+    <script src="../Scripts/Common.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        window.history.forward();
+        function noBack() {
+            if (!navigator.onLine) {
+                document.body.innerHTML = 'Loading.....';
+                window.location = 'Error.aspx';
+            }
+            window.history.forward();
+        }
+    </script>
+</head>
+<body onload="noBack();" oncontextmenu="return false">
+    <form id="form1" runat="server" autocomplete="off">
+    <center>
+        <div style="width: 95%">
+            <table width="100%" cellpadding="4">
+                <tr class="linehead">
+                    <td colspan="2" align="center">
+                        <div class="row">
+                            <div class="col-lg-3">
+                                <img alt="Ubter" src="../Images/Logo.jpg" height="100px" />
+                            </div>
+                            <div class="col-lg-8" style="font-family: Agency FB; font-size: 20px;">
+                                <b style="font-family: Agency FB; font-size: 24px; color: #FF0000;">UTTARAKHAND BOARD
+                                    OF TECHNICAL EDUCATION , ROORKEE [ HARIDWAR ]
+                                    <br />
+                                    <font style="color: #FF0000; font-family: Courier New; font-size: 16px;">ANNUAL & SEMESTER
+                                        EXAMINATION<br />
+                                        <font style="color: #000000; font-family: Courier New;">( SUMMER & WINTER )</font>
+                                    </font></b>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </center>
+    <center>
+        <table cellpadding="0" cellspacing="1" style="width: 100%;">
+            <tr>
+                <td align="left" class="lineheader" style="background-color: #3CB371; font-family: Cambria;">
+                    &nbsp;&nbsp;<i style="color: #FFFFFF; font-size: 18px;">WELCOME :
+                        <%=CNAME %></i>
+                </td>
+                <td align="center" class="lineheader" style="background-color: #3CB371; font-family: Cambria;">
+                    <a class="link" href="Stuhome.aspx"><span style="color: #FFFFFF">HOME</span></a>&nbsp;|&nbsp;
+                    <a class="link" href="ChangePassword.aspx"><span style="color: #FFFFFF">CHANGE PASSWORD</span></a>&nbsp;|&nbsp;
+                    <asp:LinkButton CssClass="link" ID="Lnklogout" runat="server" OnClick="Lnklogout_Click"><span style="color: #FFFFFF">LOGOUT</span></asp:LinkButton>
+                </td>
+            </tr>
+            <tr>
+                <%--For content place holder--%>
+                <td colspan="2">
+                    <asp:UpdateProgress ID="UpdateProgress2" runat="server">
+                        <ProgressTemplate>
+                            <div class="Waiting">
+                                <div class="center">
+                                    <img src="../Images/loading.gif" alt="Loading..." />
+                                </div>
+                            </div>
+                        </ProgressTemplate>
+                    </asp:UpdateProgress>
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                    </asp:ContentPlaceHolder>
+                    <hr />
+                    <marquee onmouseover="this.stop();" direction="left" onmouseout="this.start();"><span style="color: #FF0000; font-style:italic; font-size:15px;">* Please Do Not Share Your Registration Number and Password to Anyone *</span></marquee>
+                </td>
+            </tr>
+        </table>
+    </center>
+    <div id="SAN">
+        <div class="container">
+            <div align="center">
+                Uttarakhand Board of Technical Education | &#169; All Rights Reserved |
+                <%=DateTime.Now.Year.ToString() %>
+            </div>
+        </div>
+    </div>
+    </form>
+</body>
+</html>

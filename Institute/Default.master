@@ -1,0 +1,155 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Default.master.cs" Inherits="Default" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head id="Head1" runat="server">
+    <title>Application</title>
+    <link rel="Icon" href="../Images/favicon.ico" />
+    <link href="../Content/Admin/css/bootstrap.css" rel="stylesheet" />
+    <link href="../Content/Admin/css/font-awesome.css" rel="stylesheet" />
+    <link href="../Content/Admin/css/style.css" rel="stylesheet" />
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css' />
+    <link href="../CSS/HeaderFooter.css" type="text/css" rel="Stylesheet" />
+    <link href="../CSS/Homeother.css" type="text/css" rel="Stylesheet" />
+    <link href="../CSS/Home.css" type="text/css" rel="Stylesheet" />
+    <link href="../CSS/All.css" type="text/css" rel="Stylesheet" />
+    <link href="../CSS/Ins.css" type="text/css" rel="Stylesheet" />
+    <link href="../CSS/Tab.css" type="text/css" rel="Stylesheet" />
+    <script src="../Scripts/Common.js" type="text/javascript" language="javascript"></script>
+    <script type="text/javascript">
+        function noBack() {
+            if (!navigator.onLine) {
+                document.body.innerHTML = 'Loading.....';
+                window.location = '../Error.aspx';
+            }
+        }
+    </script>
+</head>
+<body style="background-color: #FFFFFF">
+    <form id="form1" runat="server" autocomplete="off">
+        <center>
+            <div style="width: 95%">
+                <table width="100%" cellpadding="4">
+                    <tr class="linehead">
+                        <td colspan="2" align="center">
+                            <div class="row">
+                                <div class="col-lg-3">
+                                    <img alt="Ppr" src="../Images/Logo.jpg" height="100px" />
+                                </div>
+                                <div class="col-lg-8" style="font-family: Agency FB; font-size: 20px;">
+                                    <b style="font-family: Agency FB; font-size: 24px; color: #FF0000;">UTTARAKHAND BOARD
+                                    OF TECHNICAL EDUCATION , ROORKEE [ HARIDWAR ]
+                                    <br />
+                                        <font style="color: #FF0000; font-family: Courier New; font-size: 16px;">ANNUAL & SEMESTER
+                                        EXAMINATION<br />
+                                            <font style="color: #000000; font-family: Courier New;">( SUMMER & WINTER )</font>
+                                        </font></b>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="navbar navbar-inverse set-radius-zero">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-2 col-sm-2 col-xs-2">
+                            <div class="navbar-header">
+                                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                                    <span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="col-md-8 col-sm-8 col-xs-8">
+                            <div class="center-div">
+                                <b style="font-family: Calibri; font-size: 24px; color: #000000;"></b>
+                                <asp:Label ID="Lblname" Font-Names="Agency FB" runat="server"
+                                    CssClass="txtbox" Font-Size="20px" Font-Bold="true" Text="Label"></asp:Label>
+
+                            </div>
+                        </div>
+                        <div class="col-md-2 col-sm-2 col-xs-2 text-center">
+                            <asp:LinkButton ID="Lnklogout" CssClass="btn-danger pull-right" runat="server"
+                                OnClick="Lnklogout_Click">LOG ME OUT</asp:LinkButton>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- LOGO HEADER END-->
+            <section class="menu-section">
+        <div class="container">
+            <div class="row ">
+                <div class="col-md-12">
+                    <div class="navbar-collapse collapse ">
+                        <ul id="menu-top" class="nav navbar-nav navbar-left">
+                       <%-- Home--%>
+                            <li id="Lnkinshome" runat="server" visible="false"><a href="Inshome.aspx" class="menu-top-active"><i class="fa fa-fw fa-home" style="color: #FF0000;"></i>Home</a></li>
+                            <li id="Lnkbrhome" runat="server" visible="false"><a href="Brhome.aspx" class="menu-top-active"><i class="fa fa-fw fa-home" style="color: #FF0000;"></i>Home</a></li>
+                             <%--Search--%>
+                            <li id="Lnksearch" runat="server"><a href="Search.aspx"><i class="fa fa-fw fa-search" style="color: #FF0000;"></i>Search</a></li>
+                            <%--Institute Change Password--%>
+                                    <li id="Lnkinspwdchnge" runat="server" visible="false"><a href="Inspwdchnge.aspx"><i class="fa fa-fw fa-lock" style="color: #FF0000;"></i>Change Password</a></li>
+                            <%--Summary--%>
+                              <li><a href="#" class="dropdown-toggle" id="ddlmenuItem" data-toggle="dropdown"><i class="fa fa-fw fa-institution" style="color: #FF0000;"></i>Summary<i
+                                class="fa fa-angle-down"></i></a>
+                                <ul class="dropdown-menu">
+                                    <li id="Lnkstuidpass" runat="server" visible="false"><a target="_blank" href="Canidpass.aspx?DOWNLOAD=PASS|ALL"><i class="fa fa-fw fa-user" style="color: #FF0000;"></i>Students Login Summary</a></li>
+                                    <li id="Lnkfee" runat="server"><a href="../Student/Feestructure.aspx" target="_blank"><i class="fa fa-fw fa-rupee" style="color: #FF0000;"></i>Fee Structure</a></li>
+                                    <li id="Lnkhtuse" runat="server"><a href="../Document/UBTER_How to use.pdf" target="_blank"><i class="fa fa-fw fa-lock" style="color: #FF0000;"></i>How to use</a></li>
+                                </ul>
+                            </li>
+                              <%--Institute Information--%>
+                            <li id="Lnkinsinformation" runat="server" visible="false"><a href="#" class="dropdown-toggle" id="Lnkinsinfo" data-toggle="dropdown"><i class="fa fa-fw fa-file" style="color: #FF0000;"></i>Institute<i
+                                class="fa fa-angle-down"></i></a>
+
+                                <ul class="dropdown-menu">
+                                    <li id="Li3" runat="server"><a href="Insexaminer.aspx"><i class="fa fa-fw fa-user" style="color: #FF0000;"></i>Examiner Details</a></li>
+                                    <li id="Li1" runat="server"><a href="Formats.aspx"><i class="fa fa-fw fa-user" style="color: #FF0000;"></i>Board_Format's</a></li>
+
+                                </ul>
+
+                            </li>
+
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+   </section>
+
+            <div style="width: 100%;">
+                <center>
+                    <asp:UpdateProgress ID="UpdateProgress2" runat="server">
+                        <ProgressTemplate>
+                            <div class="Waiting">
+                                <div class="center">
+                                    <img src="../Images/loading.gif" alt="Loading..." />
+                                </div>
+                            </div>
+                        </ProgressTemplate>
+                    </asp:UpdateProgress>
+
+                    <%--For content place holder--%>
+                    <hr />
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                    </asp:ContentPlaceHolder>
+                    <hr />
+                    <marquee onmouseover="this.stop();" behavior="alternate" direction="left" onmouseout="this.start();"><span style="color: #FF0000; font-style:italic; font-size:15px;">* For any Technical Query Please Contact to-<b style="font-size:18px">(91)-8448039848</b>*</span></marquee>
+                    <div id="SAN" style="width: 100%">
+                        <div align="center">
+                            Uttarakhand Board of Technical Education | &#169; All Rights Reserved |
+                        <%=DateTime.Now.Year.ToString() %>
+                        </div>
+                    </div>
+                </center>
+            </div>
+
+        </center>
+    </form>
+    <script src="../Content/Admin/js/jquery-1.10.2.js" type="text/javascript"></script>
+    <script src="../Content/Admin/js/bootstrap.js" type="text/javascript"></script>
+    <script src="../Content/Admin/js/custom.js" type="text/javascript"></script>
+</body>
+</html>
